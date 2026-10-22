@@ -1,4 +1,4 @@
-const map=L.map('map',{zoomControl:false,preferCanvas:true}).setView([39.79,-75.97],8);L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{attribution:'&copy; OpenStreetMap &copy; CARTO',maxZoom:19}).addTo(map);L.control.zoom({position:'bottomright'}).addTo(map);
+const map=L.map('map',{zoomControl:false,preferCanvas:true}).setView([39.79,-75.97],8);L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{attribution:'&copy; OpenStreetMap contributors',maxZoom:19}).addTo(map);L.control.zoom({position:'bottomright'}).addTo(map);
 const $=id=>document.getElementById(id), markers=new Map();let aircraft=[],selected=null,lastFetch=0,fetching=false;
 const status=s=>$('status').textContent=s;
 function feet(v){return Number.isFinite(v)?Math.round(v*3.28084).toLocaleString()+' ft':'—'}function knots(v){return Number.isFinite(v)?Math.round(v*1.94384)+' kt':'—'}
